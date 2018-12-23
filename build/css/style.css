@@ -834,24 +834,6 @@ header #get-started-btn:hover {
   line-height: 22px;
 }
 
-.blog__posts .post__read-more {
-  color: #c7b299;
-  font-family: 'Montserrat';
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  margin-top: 25px;
-  display: inline-block;
-}
-
-.blog__posts .post__little-arrow {
-  background: url(../img/little-arrow.png);
-  width: 5px;
-  height: 8px;
-  display: inline-block;
-  margin-left: 8px;
-}
-
 .blog__posts .slider {
   position: absolute;
   bottom: 20px;
@@ -916,6 +898,24 @@ header #get-started-btn:hover {
   cursor: default;
 }
 
+.post__read-more {
+  color: #c7b299;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+.post__little-arrow {
+  background: url(../img/little-arrow.png);
+  width: 5px;
+  height: 8px;
+  display: inline-block;
+  margin-left: 8px;
+}
+
 .partners {
   width: 100%;
   height: 490px;
@@ -961,4 +961,186 @@ header #get-started-btn:hover {
   width: 210px;
   height: 164px;
   background: url(../img/logo-04.png);
+}
+
+.footer {
+  width: 100%;
+  background-color: #191919;
+}
+
+.footer__wrapper {
+  width: 61%;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.footer__content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-bottom: 60px;
+}
+
+.footer h4 {
+  color: #fff;
+  font-family: 'Raleway';
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 33px;
+}
+
+.footer__about {
+  width: 258px;
+  display: inline-block;
+}
+
+.footer__about_logo img {
+  width: 64px;
+  height: 56px;
+}
+
+.footer__about_logo .logo-label {
+  font-family: 'Raleway';
+  font-size: 34px;
+  margin-left: 4px;
+  letter-spacing: -0.7px;
+  display: inline-block;
+  color: #fff;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.footer__about p {
+  color: #555555;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 30px;
+}
+
+.footer__about .post__read-more {
+  color: #d1d1d1;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer__about .post__little-arrow {
+  background: url(../img/little-arrow2.png);
+  cursor: pointer;
+}
+
+.footer__recent-posts {
+  display: inline-block;
+  width: 250px;
+  margin: 27px 30px 0 40px;
+}
+
+.footer__recent-posts .recent-post {
+  width: 100%;
+  border-bottom: solid 1px #252525;
+  margin-bottom: 20px;
+}
+
+.footer__recent-posts .recent-post:nth-last-child(1) {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.footer__recent-posts .recent-post .post__date {
+  color: #363636;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__recent-posts .recent-post .post__info {
+  color: #555555;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 10px 0 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer .selected-recent-post .post__date {
+  color: #fff;
+}
+
+.footer .selected-recent-post .post__info {
+  color: #c7b299;
+}
+
+.footer__twitter-posts {
+  display: inline-block;
+  width: 270px;
+  margin-top: 27px;
+}
+
+.footer__twitter-posts .twitter-post {
+  width: 100%;
+  border-bottom: solid 1px #252525;
+  margin-bottom: 20px;
+}
+
+.footer__twitter-posts .twitter-post:nth-last-child(1) {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.footer__twitter-posts .post__info {
+  color: #555555;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.footer__twitter-posts .post__info:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.footer__twitter-posts .post__info .tag {
+  color: #00bff3;
+  cursor: pointer;
+}
+
+.footer__twitter-posts .post__info .link {
+  cursor: pointer;
+  color: #959595;
+}
+
+.footer__twitter-posts .post__time {
+  color: #363636;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.footer__widget {
+  display: inline-block;
+  width: 270px;
+  margin-left: 30px;
+  margin-top: 27px;
+}
+
+.footer__widget #widget-photo1,
+.footer__widget #widget-photo2 {
+  margin-bottom: 10px;
+}
+
+.footer__widget #widget-photo1,
+.footer__widget #widget-photo3 {
+  margin-right: 6px;
 }

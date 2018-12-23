@@ -2,6 +2,12 @@ var card = document.querySelectorAll('.portfolio__cards_card');
 var portfolioButtons = document.querySelectorAll('.portfolio__buttons a');
 var playButton = document.querySelector('.video-presentation__play-btn');
 var posts = document.querySelectorAll('.post');
+var recentPosts = document.querySelectorAll('.recent-post');
+
+for (var i = 0; i< recentPosts.length; i++) {
+	recentPosts[i].addEventListener('mouseenter', onRecentPostEnter);
+	recentPosts[i].addEventListener('mouseleave', onRecentPostLeave);
+}
 
 for (i = 0; i < card.length; i++) {
 	card[i].addEventListener('mouseenter', onCardEnter);
@@ -61,3 +67,12 @@ function onPostEnter(e) {
 function onPostLeave(e) {
 	event.target.classList.remove('selected-post');
 } 
+
+function onRecentPostEnter(e) {
+	console.log(event.target);
+	event.target.classList.add('selected-recent-post');
+}
+
+function onRecentPostLeave(e) {
+	event.target.classList.remove('selected-recent-post');
+}
