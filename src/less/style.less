@@ -16,7 +16,9 @@ html {
 }
 
 body {
+	margin: 0 auto; 
 	max-width: 1920px;
+	width: 100%;
 }
 
 a {
@@ -855,14 +857,14 @@ header {
 }
 
 .post__read-more {
-				color: @light_brown;
-				font-family: @montserrat;
-				font-size: 14px;
-				font-weight: 400;
-				line-height: 20px;
-				margin-top: 25px;
-				display: inline-block;
-			}
+	color: @light_brown;
+	font-family: @montserrat;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	margin-top: 25px;
+	display: inline-block;
+}
 
 .post__little-arrow {
 	background: url(../img/little-arrow.png);
@@ -1035,7 +1037,6 @@ header {
 		.post__info {
 			color: #c7b299;
 		}
-		
 	}
 	
 	&__twitter-posts {
@@ -1061,6 +1062,7 @@ header {
 			line-height: 24px;
 			margin-top: 30px;
 			margin-bottom: 10px;
+			transition: 0.3s;
 
 			&:nth-last-child(1) {
 				margin-bottom: 0;
@@ -1069,11 +1071,13 @@ header {
 			.tag {
 				color: #00bff3;
 				cursor: pointer;
+				transition: 0.3s;
 			}
 
 			.link {
 				cursor: pointer;
 				color: #959595;
+				transition: 0.3s;
 			}
 		}
 
@@ -1083,6 +1087,26 @@ header {
 			font-size: 12px;
 			font-weight: 300;
 			padding-bottom: 20px;
+			transition: 0.3s;
+		}
+
+		.selected-twitter-post {
+
+			.post__time {
+				color: @white_color;
+			}
+
+			.post__info {
+				color: #c7b299;			
+			}
+
+			.tag {
+					color: @white_color;
+			}
+
+			.link {
+				color: @white_color;
+			}
 		}
 	}
 
@@ -1100,4 +1124,53 @@ header {
 			margin-right: 6px;
 		}
 	}
+
+	&__wrapper {
+		padding: 45px 0 50px;
+	}
+	
+	&__bottom {
+		width: 100%;
+		background-color: #111111;
+		color: @gray_color;
+		font-family: @montserrat;
+		font-size: 13px;
+		font-weight: 400;
+		
+		span {
+			color: #959595;
+		}
+
+		li {
+			display: inline-block;
+			border-left: solid 1px #252525;
+			padding: 0 10px 0;
+			cursor: pointer;
+
+			&:nth-child(1) {
+				border-left: none;
+			} 
+		}
+
+		.bottom__menu_left {
+			float: left;
+		}
+
+		.bottom__menu_right {
+			float: right;
+		}
+	}
+}
+
+.selected-bottom-menu-item {
+	color: @light_brown;
+	
+	span {
+		color: @light_brown;
+	}
+}
+
+.clearfix {
+	content: '';
+	clear: both;
 }

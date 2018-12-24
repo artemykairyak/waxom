@@ -6,7 +6,9 @@ html {
 }
 
 body {
+  margin: 0 auto;
   max-width: 1920px;
+  width: 100%;
 }
 
 a {
@@ -1104,6 +1106,8 @@ header #get-started-btn:hover {
   line-height: 24px;
   margin-top: 30px;
   margin-bottom: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .footer__twitter-posts .post__info:nth-last-child(1) {
@@ -1113,11 +1117,15 @@ header #get-started-btn:hover {
 .footer__twitter-posts .post__info .tag {
   color: #00bff3;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .footer__twitter-posts .post__info .link {
   cursor: pointer;
   color: #959595;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .footer__twitter-posts .post__time {
@@ -1126,6 +1134,24 @@ header #get-started-btn:hover {
   font-size: 12px;
   font-weight: 300;
   padding-bottom: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__twitter-posts .selected-twitter-post .post__time {
+  color: #fff;
+}
+
+.footer__twitter-posts .selected-twitter-post .post__info {
+  color: #c7b299;
+}
+
+.footer__twitter-posts .selected-twitter-post .tag {
+  color: #fff;
+}
+
+.footer__twitter-posts .selected-twitter-post .link {
+  color: #fff;
 }
 
 .footer__widget {
@@ -1143,4 +1169,53 @@ header #get-started-btn:hover {
 .footer__widget #widget-photo1,
 .footer__widget #widget-photo3 {
   margin-right: 6px;
+}
+
+.footer__wrapper {
+  padding: 45px 0 50px;
+}
+
+.footer__bottom {
+  width: 100%;
+  background-color: #111111;
+  color: #555555;
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.footer__bottom span {
+  color: #959595;
+}
+
+.footer__bottom li {
+  display: inline-block;
+  border-left: solid 1px #252525;
+  padding: 0 10px 0;
+  cursor: pointer;
+}
+
+.footer__bottom li:nth-child(1) {
+  border-left: none;
+}
+
+.footer__bottom .bottom__menu_left {
+  float: left;
+}
+
+.footer__bottom .bottom__menu_right {
+  float: right;
+}
+
+.selected-bottom-menu-item {
+  color: #c7b299;
+}
+
+.selected-bottom-menu-item span {
+  color: #c7b299;
+}
+
+.clearfix {
+  content: '';
+  clear: both;
 }

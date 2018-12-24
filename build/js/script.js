@@ -3,6 +3,18 @@ var portfolioButtons = document.querySelectorAll('.portfolio__buttons a');
 var playButton = document.querySelector('.video-presentation__play-btn');
 var posts = document.querySelectorAll('.post');
 var recentPosts = document.querySelectorAll('.recent-post');
+var twitterPosts = document.querySelectorAll('.twitter-post');
+var bottomMenuItems = document.querySelectorAll('.footer__bottom li');
+
+for (var i = 0; i< twitterPosts.length; i++) {
+	twitterPosts[i].addEventListener('mouseenter', onTwitterPostsEnter);
+	twitterPosts[i].addEventListener('mouseleave', onTwitterPostsLeave);
+}
+
+for (var i = 0; i< bottomMenuItems.length; i++) {
+	bottomMenuItems[i].addEventListener('mouseenter', onbottomMenuItemsEnter);
+	bottomMenuItems[i].addEventListener('mouseleave', onbottomMenuItemsLeave);
+}
 
 for (var i = 0; i< recentPosts.length; i++) {
 	recentPosts[i].addEventListener('mouseenter', onRecentPostEnter);
@@ -69,10 +81,25 @@ function onPostLeave(e) {
 } 
 
 function onRecentPostEnter(e) {
-	console.log(event.target);
 	event.target.classList.add('selected-recent-post');
 }
 
 function onRecentPostLeave(e) {
 	event.target.classList.remove('selected-recent-post');
+}
+
+function onbottomMenuItemsEnter(e) {
+	event.target.classList.add('selected-bottom-menu-item');
+}
+
+function onbottomMenuItemsLeave(e) {
+	event.target.classList.remove('selected-bottom-menu-item');
+}
+
+function onTwitterPostsEnter(e) {
+	event.target.classList.add('selected-twitter-post');
+}
+
+function onTwitterPostsLeave(e) {
+	event.target.classList.remove('selected-twitter-post');
 }
