@@ -260,6 +260,7 @@ header #get-started-btn:hover {
 .icons__icon img {
   display: block;
   margin: 0 auto;
+  display: relative;
 }
 
 .icons__icon h4 {
@@ -513,7 +514,7 @@ header #get-started-btn:hover {
 
 .video-presentation {
   width: 100%;
-  background-image: url(/img/video.png);
+  background-image: url(../img/video.png);
   background-size: cover;
   -webkit-box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.5) inset;
   box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.5) inset;

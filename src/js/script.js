@@ -1,5 +1,3 @@
-window.onload = function() {
-
 	$(document).ready(function(){
 	  $('.header-slider').slick({
 	  	prevArrow: $('#arrow-left'),
@@ -35,7 +33,6 @@ window.onload = function() {
   				}
   			}
 		});
-	});
 
 	var card = document.querySelectorAll('.portfolio__cards_card');
 	var portfolioButtons = document.querySelectorAll('.portfolio__buttons a');
@@ -48,29 +45,15 @@ window.onload = function() {
 	var sliderArrows = document.querySelectorAll('.slider-arrow');
 	var sliderArrowLeft = document.querySelector('#arrow-left');
 	var sliderArrowRight = document.querySelector('#arrow-right');
+	var icons = document.querySelectorAll('.icons__icon');
 
-	// for (var i = 0; i < sliderArrows.length; i++) {
-	// 	sliderArrows[i].addEventListener('click', disableSlideArrows);
+
+	sliderDots[0].classList.add('active-dot');
+
+	// for (var i = 0; i < icons.length; i++) {
+	// 	icons[i].addEventListener('mouseenter', onIconsEnter);
+	// 	icons[i].addEventListener('mouseleave', onIconsLeave);
 	// }
-
-	//sliderArrowLeft.addEventListener('click', onSliderArrowLeftClick);
-
-	// function disableSlideArrows() {
-	// 	var currentArrow;
-	// 	for (var i = 0; i < sliderArrows.length; i++) {
-	// 		currentArrow = $(sliderArrows[i]);
-	// 		if (currentArrow.hasClass('slick-disabled')) {
-	// 			currentArrow.addClass('disabled-arrow');
-	// 		} else {
-	// 			currentArrow.removeClass('disabled-arrow');
-	// 		}
-	// 	}
-	// }
-
-	for (var i = 0; i < sliderDots.length; i++) {
-		sliderDots[i].addEventListener('click', onSlideDotsClick);
-		sliderDots[0].classList.add('active-dot');
-	}
 
 	for (var i = 0; i< twitterPosts.length; i++) {
 		twitterPosts[i].addEventListener('mouseenter', onTwitterPostsEnter);
@@ -168,8 +151,25 @@ window.onload = function() {
 		event.target.classList.remove('selected-twitter-post');
 	}
 
-	function onSlideDotsClick(e) {
-		$(this).parent().parent().find('.dot').removeClass('active-dot');
-		$(this).addClass('active-dot');
-	}
-}
+	// function onIconsEnter(e) {
+	// 	event.target.classList.add('selected-icon');
+	// 	var attribute = event.target.querySelector('img').getAttribute('id');
+
+	// 	switch(attribute) {
+	// 		case 'icon1':
+	// 			event.target.querySelector('img').setAttribute('src', './img/selected-icon.png');
+	// 			break;
+	// 		case 'icon2':
+	// 			event.target.querySelector('img').setAttribute('src', './img/selected-icon2.png');
+	// 			break;
+	// 		case 'icon3':
+	// 			event.target.querySelector('img').setAttribute('src', './img/selected-icon3.png');
+	// 			break;
+	// 		case 'icon4':
+	// 			event.target.querySelector('img').setAttribute('src', './img/selected-icon4.png');
+	// 			break;
+
+	// 	}
+		
+	// }
+})
