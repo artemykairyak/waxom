@@ -117,17 +117,33 @@ header {
 				}
 			}
 		}
-		
-		.nav__icons {
+
+		.nav__icons_cart {
 			position: absolute;
-			bottom: 0;
-			right: -19px;
+			top: 55px;
+			right: 50px;
 			line-height: 47px;
 			cursor: pointer;
 
-			&_icon:nth-child(even) {
-				margin-left: 25px;
-			}
+			.cart-icon {
+				position: absolute;
+				right: 0;
+				width: 18px;
+			}	
+		}
+
+		.nav__icons_search {
+			position: absolute;
+			top: 55px;
+			right: 0;
+			line-height: 47px;
+			cursor: pointer;
+
+		.search-icon {
+				position: absolute;
+				right: 0;
+				width: 24px;
+			}	
 		}
 	}
 
@@ -240,6 +256,18 @@ header {
 // ICON SECTION
 
 
+.active-icon {
+	opacity: 0;
+}
+
+.enable-icon {
+	opacity: 1;
+}
+
+.disable-icon {
+	opacity: 0;
+}
+
 .icons {
 	width: 100%;
 
@@ -255,11 +283,25 @@ header {
 	&__icon {
 		text-align: center;
 		cursor: pointer;
+		min-width: 200px;
+
+		&_image {
+			position: relative;
+			width: 100%;
+			height: 49px;
+
+			.icon-image {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				transition: 0.3s;
+			}
+		}
 		
 		img {
 			display: block;
 			margin: 0 auto;
-			display: relative;
 		}
 
 		h4 {
@@ -269,6 +311,7 @@ header {
 			color: @gray_color;
 			margin-top: 30px;
 			margin-bottom: 20px;
+			transition: 0.3s;
 		}
 
 		p {
@@ -284,6 +327,7 @@ header {
 			height: 3px;
 			background-color: #f1eee9;
 			margin: 0 auto;
+			transition: 0.3s;
 		}
 	}
 
@@ -406,7 +450,7 @@ header {
 	}
 
 	&__buttons {
-		width: 605px;
+		width: 60%;
 		margin: 40px auto;
 		display: flex;
 		justify-content: space-between;
@@ -438,26 +482,19 @@ header {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		margin: 0 auto; 
 
 		&_card {
 			background-color: #fbfaf8;
-			position: relative;
 			margin-bottom: 30px;
 			transition: 0.5s;
 			cursor: pointer;
+			width: 32.5%;
 
 			img {
 				transition: 0.5s;
-			}
-
-			.arrow {
-				background: url(../img/arrow.png);
-				width: 30px;
-				height: 10px;
-				position: absolute;
-				top: 227px;
-				left: 20px;
-				transition: 0.2s;
+				width: 100%;
+				position: relative;
 			}
 		}
 
@@ -602,6 +639,8 @@ header {
 
 		img {
 			margin-right: 30px;
+			width: auto;
+			height: 100%;
 		}
 
 		.features__text-container {
@@ -674,6 +713,7 @@ header {
 			.stats__card {
 				text-align: center;
 				transition: 0.3s;
+				min-width: 136px;
 
 				&:hover {
 					transform: scale(1.1);
@@ -924,28 +964,34 @@ header {
 		align-items: center;
 	}
 
+	&__partner {
+		width: 23%;
+		height: 100%;
+		background-size: contain;
+	}
+
 	#p1 {
-		width: 210px;
+		background: url(../img/logo-01.png) no-repeat;
+		background-size: contain;
 		height: 127px;
-		background: url(../img/logo-01.png);
 	}
 
 	#p2 {
-		width: 210px;
+		background: url(../img/logo-02.png) no-repeat;
+		background-size: contain;
 		height: 210px;
-		background: url(../img/logo-02.png);
 	}
 
 	#p3 {
-		width: 210px;
+		background: url(../img/logo-03.png) no-repeat;
+		background-size: contain;
 		height: 130px;
-		background: url(../img/logo-03.png);
 	}
 
 	#p4 {
-		width: 210px;
+		background: url(../img/logo-04.png) no-repeat;
+		background-size: contain;
 		height: 164px;
-		background: url(../img/logo-04.png);
 	}
 }
 
@@ -1147,6 +1193,10 @@ header {
 		margin-left: 30px;
 		margin-top: 27px;
 
+		img {
+			width: 47%;
+		}
+
 		#widget-photo1, #widget-photo2 {
 			margin-bottom: 10px;
 		}
@@ -1204,4 +1254,43 @@ header {
 .clearfix {
 	content: '';
 	clear: both;
+}
+
+@media (min-width: 1199px) and (max-width: 1810px) {
+	.nav__icons_cart {
+		display: none;
+	}
+
+	.nav__icons_search {
+		display: none;
+	}
+
+	// .portfolio__cards {
+ //    	width: 50%;
+	// }
+}
+
+// Large desktops and laptops
+@media (min-width: 1200px) {
+	
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
 }

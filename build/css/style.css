@@ -115,16 +115,32 @@ header nav .nav__menu .menu__item:hover {
   color: #c7b299;
 }
 
-header nav .nav__icons {
+header nav .nav__icons_cart {
   position: absolute;
-  bottom: 0;
-  right: -19px;
+  top: 55px;
+  right: 50px;
   line-height: 47px;
   cursor: pointer;
 }
 
-header nav .nav__icons_icon:nth-child(even) {
-  margin-left: 25px;
+header nav .nav__icons_cart .cart-icon {
+  position: absolute;
+  right: 0;
+  width: 18px;
+}
+
+header nav .nav__icons_search {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  line-height: 47px;
+  cursor: pointer;
+}
+
+header nav .nav__icons_search .search-icon {
+  position: absolute;
+  right: 0;
+  width: 24px;
 }
 
 header .home__wrapper {
@@ -233,6 +249,18 @@ header #get-started-btn:hover {
   padding-bottom: 40px;
 }
 
+.active-icon {
+  opacity: 0;
+}
+
+.enable-icon {
+  opacity: 1;
+}
+
+.disable-icon {
+  opacity: 0;
+}
+
 .icons {
   width: 100%;
 }
@@ -255,12 +283,28 @@ header #get-started-btn:hover {
 .icons__icon {
   text-align: center;
   cursor: pointer;
+  min-width: 200px;
+}
+
+.icons__icon_image {
+  position: relative;
+  width: 100%;
+  height: 49px;
+}
+
+.icons__icon_image .icon-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .icons__icon img {
   display: block;
   margin: 0 auto;
-  display: relative;
 }
 
 .icons__icon h4 {
@@ -270,6 +314,8 @@ header #get-started-btn:hover {
   color: #555555;
   margin-top: 30px;
   margin-bottom: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .icons__icon p {
@@ -285,6 +331,8 @@ header #get-started-btn:hover {
   height: 3px;
   background-color: #f1eee9;
   margin: 0 auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .icons .selected_icon h4 {
@@ -402,7 +450,7 @@ header #get-started-btn:hover {
 }
 
 .portfolio__buttons {
-  width: 605px;
+  width: 60%;
   margin: 40px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,31 +492,23 @@ header #get-started-btn:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .portfolio .portfolio__cards_card {
   background-color: #fbfaf8;
-  position: relative;
   margin-bottom: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
+  width: 32.5%;
 }
 
 .portfolio .portfolio__cards_card img {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.portfolio .portfolio__cards_card .arrow {
-  background: url(../img/arrow.png);
-  width: 30px;
-  height: 10px;
-  position: absolute;
-  top: 227px;
-  left: 20px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  width: 100%;
+  position: relative;
 }
 
 .portfolio .portfolio__cards .card__description {
@@ -633,6 +673,8 @@ header #get-started-btn:hover {
 
 .features__wrapper img {
   margin-right: 30px;
+  width: auto;
+  height: 100%;
 }
 
 .features__wrapper .features__text-container {
@@ -710,6 +752,7 @@ header #get-started-btn:hover {
   text-align: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  min-width: 136px;
 }
 
 .blog__stats .stats__wrapper .stats__card:hover {
@@ -963,28 +1006,34 @@ header #get-started-btn:hover {
   align-items: center;
 }
 
+.partners__partner {
+  width: 23%;
+  height: 100%;
+  background-size: contain;
+}
+
 .partners #p1 {
-  width: 210px;
+  background: url(../img/logo-01.png) no-repeat;
+  background-size: contain;
   height: 127px;
-  background: url(../img/logo-01.png);
 }
 
 .partners #p2 {
-  width: 210px;
+  background: url(../img/logo-02.png) no-repeat;
+  background-size: contain;
   height: 210px;
-  background: url(../img/logo-02.png);
 }
 
 .partners #p3 {
-  width: 210px;
+  background: url(../img/logo-03.png) no-repeat;
+  background-size: contain;
   height: 130px;
-  background: url(../img/logo-03.png);
 }
 
 .partners #p4 {
-  width: 210px;
+  background: url(../img/logo-04.png) no-repeat;
+  background-size: contain;
   height: 164px;
-  background: url(../img/logo-04.png);
 }
 
 .footer {
@@ -1183,6 +1232,10 @@ header #get-started-btn:hover {
   margin-top: 27px;
 }
 
+.footer__widget img {
+  width: 47%;
+}
+
 .footer__widget #widget-photo1,
 .footer__widget #widget-photo2 {
   margin-bottom: 10px;
@@ -1240,4 +1293,22 @@ header #get-started-btn:hover {
 .clearfix {
   content: '';
   clear: both;
+}
+
+/* Portrait tablets and medium desktops */
+
+/* Portrait tablets and small desktops */
+
+/* Landscape phones and portrait tablets */
+
+/* Landscape phones and smaller */
+
+@media (min-width: 1199px) and (max-width: 1810px) {
+  .nav__icons_cart {
+    display: none;
+  }
+
+  .nav__icons_search {
+    display: none;
+  }
 }
