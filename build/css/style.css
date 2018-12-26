@@ -752,14 +752,20 @@ header #get-started-btn:hover {
 .blog__posts .posts__wrapper {
   width: 61%;
   margin: 0 auto;
+}
+
+.blog__posts .posts-slider {
+  width: 100%;
+}
+
+.blog__posts .posts-row {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .blog__posts .text {
@@ -822,6 +828,14 @@ header #get-started-btn:hover {
   font-size: 12px;
   line-height: 25px;
   text-align: center;
+}
+
+.blog__posts .post-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .blog__posts .post__info {

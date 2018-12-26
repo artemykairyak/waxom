@@ -716,9 +716,17 @@ header {
 		.posts__wrapper {
 			width: 61%;
 			margin: 0 auto;
+			
+		}
+
+		.posts-slider {
+			width: 100%;
+		}
+
+		.posts-row {
+			width: 100%;
 			display: flex;
 			justify-content: space-between;
-			flex-wrap: wrap;
 		}
 
 		.text {
@@ -776,8 +784,14 @@ header {
 					font-size: 12px;
 					line-height: 25px;
 					text-align: center;
-				}
-				
+				}	
+			}
+
+			&-dots {
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
 			}
 
 			&__info {
@@ -870,6 +884,8 @@ header {
 		}
 	}
 }
+
+
 
 .post__read-more {
 	color: @light_brown;
