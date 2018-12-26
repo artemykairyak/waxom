@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800|Roboto:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 <body>
 	<header>
@@ -32,49 +34,65 @@
 			</nav>
 		</div>
 		<div class="home__wrapper">
-			<div id='arrow-left'>
+			<div class="slider-arrow disabled-arrow" id='arrow-left'>
 				<img src="./img/left.png" alt="arrow-left">
 			</div>
-			<div class="home__text">
-				<p class="home__text_upper">Unique and Modern Design</p>
-				<h1>Portfolio PSD Template</h1>
-				<p class="home__text_bottom">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+			<div class="header-slider">
+				<div class="home__text">
+					<p class="home__text_upper">Unique and Modern Design</p>
+					<h1>Portfolio PSD Template</h1>
+					<p class="home__text_bottom">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				</div>
+				<div class="home__text">
+					<p class="home__text_upper">2</p>
+					<h1>Portfolio PSD Template</h1>
+					<p class="home__text_bottom">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				</div>
+				<div class="home__text">
+					<p class="home__text_upper">3</p>
+					<h1>Portfolio PSD Template</h1>
+					<p class="home__text_bottom">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				</div>
+				<div class="home__text">
+					<p class="home__text_upper">4</p>
+					<h1>Portfolio PSD Template</h1>
+					<p class="home__text_bottom">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				</div>
+				<div class="home__text">
+					<p class="home__text_upper">5</p>
+					<h1>Portfolio PSD Template</h1>
+					<p class="home__text_bottom">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+				</div>
 			</div>
 			<a href="#" class="button" id="get-started-btn">get started</a>
-			<div id='arrow-right'>
+			<div class="slider-arrow" id='arrow-right'>
 				<img src="./img/right.png" alt="arrow-right">
 			</div>
-			<div class="slider">
-				<div class="slider__slide selected"></div>
-				<div class="slider__slide"></div>
-				<div class="slider__slide"></div>
-				<div class="slider__slide"></div>
-				<div class="slider__slide"></div>
-			</div>
+			<div class="slider"></div>
 		</div>
 	</header>
 	<section class="icons">
 		<div class="icons__container">
 			<div class="icons__icon">
-				<img src="./img/icon.png" alt="pen-icon">
+				<img src="./img/icon1.png" id='icon1' alt="pen icon">
 				<h4>Web & App Design</h4>
 				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
 				<div class="line"></div>
 			</div>
-			<div class="icons__icon selected_icon">
-				<img src="./img/icon2.png" alt="development-icon">
+			<div class="icons__icon">
+				<img src="./img/icon2.png" id='icon2' alt="development icon">
 				<h4>Development</h4>
 				<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
 				<div class="line"></div>
 			</div>
 			<div class="icons__icon">
-				<img src="./img/icon3.png" alt="customization-icon">
+				<img src="./img/icon3.png" id='icon3' alt="customization icon">
 				<h4>Customization</h4>
 				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
 				<div class="line"></div>
 			</div>
 			<div class="icons__icon">
-				<img src="./img/icon4.png" alt="case-icon">
+				<img src="./img/icon4.png" id='icon4' alt="case icon">
 				<h4>Marketing</h4>
 				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
 				<div class="line"></div>
@@ -236,56 +254,111 @@
 					<h2>Recent Posts.</h2>
 					<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
 				</div>
-				<div class="post">
-					<div class="post__image">
-						<img src="./img/post1.png" alt="post photo">
-						<div class="post__date">
-							<div class="post__date_day">30</div>
-							<div class="post__date_month">Sep.</div>
+				<div class="posts-slider">
+					<div class="posts-row-wrapper">
+						<div class="posts-row">
+							<div class="post">
+								<div class="post__image">
+									<div class="post__image_slider">
+										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
+										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
+										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
+										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
+										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
+									</div>
+									<div class="post__date">
+											<div class="post__date_day">30</div>
+											<div class="post__date_month">Sep.</div>
+										</div>
+										<div class="post-dots"></div>
+								</div>
+								<div class="post__info">
+									<p class="post__title">Lorem ipsum dolor sit amet</p>
+									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+									<div class="post__read-more">Read More</div>
+									<div class="post__little-arrow"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="post__image">
+									<img src="./img/post2.png" alt="post photo">
+									<div class="post__date">
+										<div class="post__date_day">30</div>
+										<div class="post__date_month">Sep.</div>
+									</div>
+								</div>
+								<div class="post__info">
+									<p class="post__title">Lorem ipsum dolor sit amet</p>
+									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+									<div class="post__read-more">Read More</div>
+									<div class="post__little-arrow"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="post__image">
+									<img src="./img/post3.png" alt="post photo">
+									<div class="post__date">
+										<div class="post__date_day">30</div>
+										<div class="post__date_month">Sep.</div>
+									</div>
+								</div>
+								<div class="post__info">
+									<p class="post__title">Lorem ipsum dolor sit amet</p>
+									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+									<div class="post__read-more">Read More</div>
+									<div class="post__little-arrow"></div>
+								</div>
+							</div>
 						</div>
-						<div class="slider">
-							<div class="slider__slide selected"></div>
-							<div class="slider__slide"></div>
-							<div class="slider__slide"></div>
-							<div class="slider__slide"></div>
-							<div class="slider__slide"></div>
+					</div>
+					<div class="posts-row-wrapper">
+						<div class="posts-row">
+							<div class="post">
+								<div class="post__image">
+									<img src="./img/post1.png" alt="post photo">
+									<div class="post__date">
+										<div class="post__date_day">30</div>
+										<div class="post__date_month">Sep.</div>
+									</div>
+								</div>
+								<div class="post__info">
+									<p class="post__title">Lorem ipsum dolor sit amet</p>
+									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+									<div class="post__read-more">Read More</div>
+									<div class="post__little-arrow"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="post__image">
+									<img src="./img/post2.png" alt="post photo">
+									<div class="post__date">
+										<div class="post__date_day">30</div>
+										<div class="post__date_month">Sep.</div>
+									</div>
+								</div>
+								<div class="post__info">
+									<p class="post__title">Lorem ipsum dolor sit amet</p>
+									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+									<div class="post__read-more">Read More</div>
+									<div class="post__little-arrow"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="post__image">
+									<img src="./img/post3.png" alt="post photo">
+									<div class="post__date">
+										<div class="post__date_day">30</div>
+										<div class="post__date_month">Sep.</div>
+									</div>
+								</div>
+								<div class="post__info">
+									<p class="post__title">Lorem ipsum dolor sit amet</p>
+									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+									<div class="post__read-more">Read More</div>
+									<div class="post__little-arrow"></div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="post__info">
-						<p class="post__title">Lorem ipsum dolor sit amet</p>
-						<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-						<div class="post__read-more">Read More</div>
-						<div class="post__little-arrow"></div>
-					</div>
-				</div>
-				<div class="post">
-					<div class="post__image">
-						<img src="./img/post2.png" alt="post photo">
-						<div class="post__date">
-							<div class="post__date_day">30</div>
-							<div class="post__date_month">Sep.</div>
-						</div>
-					</div>
-					<div class="post__info">
-						<p class="post__title">Lorem ipsum dolor sit amet</p>
-						<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-						<div class="post__read-more">Read More</div>
-						<div class="post__little-arrow"></div>
-					</div>
-				</div>
-				<div class="post">
-					<div class="post__image">
-						<img src="./img/post3.png" alt="post photo">
-						<div class="post__date">
-							<div class="post__date_day">30</div>
-							<div class="post__date_month">Sep.</div>
-						</div>
-					</div>
-					<div class="post__info">
-						<p class="post__title">Lorem ipsum dolor sit amet</p>
-						<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-						<div class="post__read-more">Read More</div>
-						<div class="post__little-arrow"></div>
 					</div>
 				</div>
 			</div>
@@ -374,6 +447,8 @@
 			</div>
 		</div>
 	</section>
-	<script src="./js/script.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
