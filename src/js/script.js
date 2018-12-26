@@ -91,14 +91,21 @@
 	var sliderArrowRight = document.querySelector('#arrow-right');
 	var icons = document.querySelectorAll('.icons__icon');
 	var postDots = document.querySelectorAll('.post-dots .dot');
+	var navIcons = document.querySelectorAll('.nav_icon');
+
 
 	postDots[0].classList.add('active-dot');
 	sliderDots[0].classList.add('active-dot');
 
-	// for (var i = 0; i < icons.length; i++) {
-	// 	icons[i].addEventListener('mouseenter', onIconsEnter);
-	// 	icons[i].addEventListener('mouseleave', onIconsLeave);
-	// }
+	for (var i = 0; i < navIcons.length; i++) {
+		navIcons[i].addEventListener('mouseenter', onNavIconsEnter);
+		navIcons[i].addEventListener('mouseleave', onNavIconsLeave);
+	}
+
+	for (var i = 0; i < icons.length; i++) {
+		icons[i].addEventListener('mouseenter', onIconsEnter);
+		icons[i].addEventListener('mouseleave', onIconsLeave);
+	}
 
 	for (var i = 0; i< twitterPosts.length; i++) {
 		twitterPosts[i].addEventListener('mouseenter', onTwitterPostsEnter);
@@ -196,25 +203,25 @@
 		event.target.classList.remove('selected-twitter-post');
 	}
 
-	// function onIconsEnter(e) {
-	// 	event.target.classList.add('selected-icon');
-	// 	var attribute = event.target.querySelector('img').getAttribute('id');
+	function onIconsEnter(e) {
+		event.target.classList.add('selected_icon');
+		event.target.querySelector('.active-icon').classList.add('enable-icon');
+		event.target.querySelector('.unactive-icon').classList.add('disable-icon');
+	}
 
-	// 	switch(attribute) {
-	// 		case 'icon1':
-	// 			event.target.querySelector('img').setAttribute('src', './img/selected-icon.png');
-	// 			break;
-	// 		case 'icon2':
-	// 			event.target.querySelector('img').setAttribute('src', './img/selected-icon2.png');
-	// 			break;
-	// 		case 'icon3':
-	// 			event.target.querySelector('img').setAttribute('src', './img/selected-icon3.png');
-	// 			break;
-	// 		case 'icon4':
-	// 			event.target.querySelector('img').setAttribute('src', './img/selected-icon4.png');
-	// 			break;
+	function onIconsLeave(e) {
+		event.target.classList.remove('selected_icon');
+		event.target.querySelector('.active-icon').classList.remove('enable-icon');
+		event.target.querySelector('.unactive-icon').classList.remove('disable-icon');
+	}
 
-	// 	}
-		
-	// }
+	function onNavIconsEnter(e) {
+		event.target.querySelector('.active-icon').classList.add('enable-icon');
+		event.target.querySelector('.unactive-icon').classList.add('disable-icon');
+	}
+
+	function onNavIconsLeave(e) {
+		event.target.querySelector('.active-icon').classList.remove('enable-icon');
+		event.target.querySelector('.unactive-icon').classList.remove('disable-icon');
+	}
 })
