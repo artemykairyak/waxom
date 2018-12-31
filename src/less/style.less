@@ -69,6 +69,21 @@ header {
 		padding-right: 19.7%;
 	}
 
+	.burger {
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 100px;
+		left: 15px;
+		cursor: pointer;
+		display: none;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
 	nav {
 		padding-top: 40px;
 		height: 56px;
@@ -272,18 +287,16 @@ header {
 	width: 100%;
 
 	&__container {
-		display: flex;
-		justify-content: space-between;
 		width: 60%;
-		margin: 82px auto 0;
-		align-items: baseline;
-		margin-bottom: 80px;
+		margin: 82px auto 80px;
+		font-size: 0px;
 	}
 
 	&__icon {
 		text-align: center;
 		cursor: pointer;
-		min-width: 200px;
+		width: 25%;
+		display: inline-block;
 
 		&_image {
 			position: relative;
@@ -385,7 +398,6 @@ header {
 			&:hover {
 				z-index: 3;
 			}
-
 		}
 	}
 
@@ -571,14 +583,14 @@ header {
 		.play-btn-circle {
 			width: 70px;
 			height: 70px;
-			background-image: url(/img/icon-play-circle.png);
+			background-image: url(../img/icon-play-circle.png);
 			margin: 15px;
 			display: inline-block;
 			transition: transform 0.5s;					
 	 		}
 
 	 	.play-btn-play {
-				background-image: url(/img/icon-play.png);
+				background-image: url(../img/icon-play.png);
 				width: 70px;
 				height: 70px;
 				position: absolute;
@@ -631,22 +643,28 @@ header {
 	background-color: #fbfaf8;
 
 	&__wrapper {
-		width: 60%;
+		width: 58%;
 		margin: 0 auto;
-		display: flex;
-		justify-content: center;
 		padding-top: 80px;
+		font-size: 0px;
 
-		img {
-			margin-right: 30px;
-			width: auto;
-			height: 100%;
+		.picture {
+			margin-right: 10px;
+			width: 39%;
+			min-height: 615px;
+			background-image: url(../img/iPhone_in_hand.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			display: inline-block;
+			vertical-align: bottom;
 		}
 
 		.features__text-container {
-			width: 100%;
-			align-self: center;
-			margin-bottom: 80px;
+			width: 60%;
+			//margin-bottom: 80px;
+			margin-bottom: 15%;
+			display: inline-block;
+			vertical-align: middle;
 		
 			h2 {
 				color: @gray_color;
@@ -1025,7 +1043,8 @@ header {
 	}
 
 	&__about {
-		width: 258px;
+		//width: 258px;
+		width: 25%;
 		display: inline-block;
 
 		&_logo {
@@ -1070,7 +1089,8 @@ header {
 
 	&__recent-posts {
 		display: inline-block;
-		width: 250px;
+		//width: 250px;
+		width: 25%;
 		margin: 27px 30px 0 40px;
 
 
@@ -1118,7 +1138,8 @@ header {
 	
 	&__twitter-posts {
 		display: inline-block;
-		width: 270px;
+		//width: 270px;
+		width: 25%;
 		margin-top: 27px;
 
 		.twitter-post {
@@ -1189,7 +1210,8 @@ header {
 
 	&__widget {
 		display: inline-block;
-		width: 270px;
+		//width: 270px;
+		width: 25%;
 		margin-left: 30px;
 		margin-top: 27px;
 
@@ -1256,7 +1278,7 @@ header {
 	clear: both;
 }
 
-@media (min-width: 1199px) and (max-width: 1810px) {
+@media (min-width: 1200px) and (max-width: 1810px) {
 	.nav__icons_cart {
 		display: none;
 	}
@@ -1264,20 +1286,34 @@ header {
 	.nav__icons_search {
 		display: none;
 	}
-
-	// .portfolio__cards {
- //    	width: 50%;
-	// }
-}
-
-// Large desktops and laptops
-@media (min-width: 1200px) {
-	
 }
 
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
 
+	header .burger {
+		display: inline-block;
+	}
+		
+	.nav__menu {
+		//flex-direction: column;
+		display: inline-block;
+		position: absolute;
+		left: -150px;
+		top: 90px;
+
+		.menu__item {
+			display: block;
+		}
+	}
+
+	.nav__icons_cart {
+		display: none;
+	}
+
+	.nav__icons_search {
+		display: none;
+	}
 }
 
 /* Portrait tablets and small desktops */
