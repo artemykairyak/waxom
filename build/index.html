@@ -13,20 +13,64 @@
 <body>
 	<header>
 		<div class="menu__wrapper">
+			<div class="menu-popup">
+					<ul class="nav__menu">
+					<li class="menu__item">
+						<a href="">Home</a>
+					</li>
+					<li class="menu__item">
+						<a href="">About Us</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Portfolio</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Features</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Blog</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Pricing</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Shortcodes</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Contact</a>
+					</li>
+				</ul>
+				</div>
 			<nav>
 				<div class="nav__logo">
 					<img src="./img/logos.png" alt="logo">
 					<p>Waxom</p>
 				</div>
 				<ul class="nav__menu">
-					<li class="menu__item">Home</li>
-					<li class="menu__item">About Us</li>
-					<li class="menu__item">Portfolio</li>
-					<li class="menu__item">Features</li>
-					<li class="menu__item">Blog</li>
-					<li class="menu__item">Pricing</li>
-					<li class="menu__item">Shortcodes</li>
-					<li class="menu__item">Contact</li>
+					<li class="menu__item">
+						<a href="">Home</a>
+					</li>
+					<li class="menu__item">
+						<a href="">About Us</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Portfolio</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Features</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Blog</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Pricing</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Shortcodes</a>
+					</li>
+					<li class="menu__item">
+						<a href="">Contact</a>
+					</li>
 				</ul>
 				<div class="burger">
 					<img src="img/burger.png" class="burger-icon unactive-icon" alt="menu">
@@ -125,9 +169,15 @@
 			<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
 		</div>
 		<div class="browser__wrapper">
-			<img src="img/browser-left.png" alt="browser-left" id="browser-left">
-			<img src="img/browser-center.png" alt="browser-center" id="browser-center">
-			<img src="img/browser-right.png" alt="browser-right" id="browser-right">
+			<div class="browser-slide">
+				<img src="img/browser-left.png" alt="browser-left" id="browser-left">
+			</div>
+			<div class="browser-slide">
+				<img src="img/browser-center.png" alt="browser-center" id="browser-center">
+			</div>
+			<div class="browser-slide">
+				<img src="img/browser-right.png" alt="browser-right" id="browser-right">
+			</div>
 		</div>
 		<div class="purchase">
 			<div class="purchase__wrapper">
@@ -146,11 +196,13 @@
 				<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
 			</div>
 			<div class="portfolio__buttons">
-				<a class="selected-portfolio-btn" href="">All</a>
-				<a href="">Web Design</a>
-				<a href="">Mobile App</a>
-				<a href="">Illustration</a>
-				<a href="">Photography</a>
+				<div class="portfolio__buttons_wrapper">
+					<a class="selected-portfolio-btn" href="">All</a>
+					<a href="">Web Design</a>
+					<a href="">Mobile App</a>
+					<a href="">Illustration</a>
+					<a href="">Photography</a>
+				</div>
 			</div>
 			<div class="portfolio__cards">
 				<div class="portfolio__cards_card">
@@ -225,6 +277,7 @@
 					<li>Investigationes demonstraverunt lectores</li>
 				</ul>
 			</div>
+
 		</div>
 	</section>
 	<section class="blog">
@@ -269,109 +322,101 @@
 					<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
 				</div>
 				<div class="posts-slider">
-					<div class="posts-row-wrapper">
-						<div class="posts-row">
-							<div class="post">
-								<div class="post__image">
-									<div class="post__image_slider">
-										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
-										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
-										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
-										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
-										<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
-									</div>
-									<div class="post__date">
-											<div class="post__date_day">30</div>
-											<div class="post__date_month">Sep.</div>
-										</div>
-										<div class="post-dots"></div>
-								</div>
-								<div class="post__info">
-									<p class="post__title">Lorem ipsum dolor sit amet</p>
-									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-									<div class="post__read-more">Read More</div>
-									<div class="post__little-arrow"></div>
-								</div>
+					<div class="post">
+						<div class="post__image">
+							<div class="post__image_slider">
+								<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
+								<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
+								<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
+								<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
+								<div class="post__image_slide"><img src="./img/post1.png" alt="post photo"></div>
 							</div>
-							<div class="post">
-								<div class="post__image">
-									<img src="./img/post2.png" alt="post photo">
-									<div class="post__date">
-										<div class="post__date_day">30</div>
-										<div class="post__date_month">Sep.</div>
-									</div>
-								</div>
-								<div class="post__info">
-									<p class="post__title">Lorem ipsum dolor sit amet</p>
-									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-									<div class="post__read-more">Read More</div>
-									<div class="post__little-arrow"></div>
-								</div>
+							<div class="post__date">
+								<div class="post__date_day">30</div>
+								<div class="post__date_month">Sep.</div>
 							</div>
-							<div class="post">
-								<div class="post__image">
-									<img src="./img/post3.png" alt="post photo">
-									<div class="post__date">
-										<div class="post__date_day">30</div>
-										<div class="post__date_month">Sep.</div>
-									</div>
-								</div>
-								<div class="post__info">
-									<p class="post__title">Lorem ipsum dolor sit amet</p>
-									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-									<div class="post__read-more">Read More</div>
-									<div class="post__little-arrow"></div>
-								</div>
-							</div>
+							<div class="post-dots"></div>
+						</div>
+						<div class="post__info">
+							<p class="post__title">Lorem ipsum dolor sit amet</p>
+							<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+							<div class="post__read-more">Read More</div>
+							<div class="post__little-arrow"></div>
 						</div>
 					</div>
-					<div class="posts-row-wrapper">
-						<div class="posts-row">
-							<div class="post">
-								<div class="post__image">
-									<img src="./img/post1.png" alt="post photo">
-									<div class="post__date">
-										<div class="post__date_day">30</div>
-										<div class="post__date_month">Sep.</div>
-									</div>
-								</div>
-								<div class="post__info">
-									<p class="post__title">Lorem ipsum dolor sit amet</p>
-									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-									<div class="post__read-more">Read More</div>
-									<div class="post__little-arrow"></div>
-								</div>
+					<div class="post">
+						<div class="post__image">
+							<img src="./img/post2.png" alt="post photo">
+							<div class="post__date">
+								<div class="post__date_day">30</div>
+								<div class="post__date_month">Sep.</div>
 							</div>
-							<div class="post">
-								<div class="post__image">
-									<img src="./img/post2.png" alt="post photo">
-									<div class="post__date">
-										<div class="post__date_day">30</div>
-										<div class="post__date_month">Sep.</div>
-									</div>
-								</div>
-								<div class="post__info">
-									<p class="post__title">Lorem ipsum dolor sit amet</p>
-									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-									<div class="post__read-more">Read More</div>
-									<div class="post__little-arrow"></div>
-								</div>
+						</div>
+						<div class="post__info">
+							<p class="post__title">Lorem ipsum dolor sit amet</p>
+							<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+							<div class="post__read-more">Read More</div>
+							<div class="post__little-arrow"></div>
+						</div>
+					</div>
+					<div class="post">
+						<div class="post__image">
+							<img src="./img/post3.png" alt="post photo">
+							<div class="post__date">
+								<div class="post__date_day">30</div>
+								<div class="post__date_month">Sep.</div>
 							</div>
-							<div class="post">
-								<div class="post__image">
-									<img src="./img/post3.png" alt="post photo">
-									<div class="post__date">
-										<div class="post__date_day">30</div>
-										<div class="post__date_month">Sep.</div>
-									</div>
-								</div>
-								<div class="post__info">
-									<p class="post__title">Lorem ipsum dolor sit amet</p>
-									<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-									<div class="post__read-more">Read More</div>
-									<div class="post__little-arrow"></div>
-								</div>
+						</div>
+						<div class="post__info">
+							<p class="post__title">Lorem ipsum dolor sit amet</p>
+							<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+							<div class="post__read-more">Read More</div>
+							<div class="post__little-arrow"></div>
+						</div>
+					</div>
+					<div class="post">
+						<div class="post__image">
+							<img src="./img/post1.png" alt="post photo">
+							<div class="post__date">
+								<div class="post__date_day">30</div>
+								<div class="post__date_month">Sep.</div>
 							</div>
+						</div>
+						<div class="post__info">
+							<p class="post__title">Lorem ipsum dolor sit amet</p>
+							<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+							<div class="post__read-more">Read More</div>
+							<div class="post__little-arrow"></div>
+						</div>
+					</div>
+					<div class="post">
+						<div class="post__image">
+							<img src="./img/post2.png" alt="post photo">
+							<div class="post__date">
+								<div class="post__date_day">30</div>
+								<div class="post__date_month">Sep.</div>
+							</div>
+						</div>
+						<div class="post__info">
+							<p class="post__title">Lorem ipsum dolor sit amet</p>
+							<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+							<div class="post__read-more">Read More</div>
+							<div class="post__little-arrow"></div>
+						</div>
+					</div>
+					<div class="post">
+						<div class="post__image">
+							<img src="./img/post3.png" alt="post photo">
+							<div class="post__date">
+								<div class="post__date_day">30</div>
+								<div class="post__date_month">Sep.</div>
+							</div>
+						</div>
+						<div class="post__info">
+							<p class="post__title">Lorem ipsum dolor sit amet</p>
+							<p class="post__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+							<div class="post__read-more">Read More</div>
+							<div class="post__little-arrow"></div>
 						</div>
 					</div>
 				</div>

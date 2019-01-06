@@ -40,7 +40,7 @@ a {
 	margin: 0 auto;
 	text-align: center;
 	padding-top: 85px;
-	width: 760px;
+	width: 100%;
 
 	h2 {
 		color: @gray_color;
@@ -52,12 +52,50 @@ a {
 
 	p {
 		color: @light_gray;
-		font-family: Montserrat;
+		font-family: @montserrat;
 		font-size: 16px;
 		line-height: 28px;
 	}
 }
 
+.menu-popup{
+	width: 80%;
+	text-align: center;
+	z-index: 41;
+	border: solid 1px @gray_color;
+	border-radius: 5px;
+	position: absolute;
+	top: 110px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	a {
+		color: @white_color;
+		line-height: 20px;
+
+		&:hover {
+			color: @light_brown;
+		}
+	}
+
+	.menu__item {
+		color: @white_color;
+		opacity: 1; 
+		margin-top: 10px;
+		font-size: 14px;
+		font-family: @montserrat;
+		font-weight: 400;
+		display: inline-block;
+		margin-right: 10px;
+
+		&:nth-last-child(1) {
+			margin-bottom: 10px;
+			margin-right: 0px;
+		}
+	}
+}
 
 header {
 	background: url('../img/bgphoto.png');
@@ -73,8 +111,9 @@ header {
 		width: 30px;
 		height: 30px;
 		position: absolute;
-		top: 100px;
-		left: 15px;
+		top: 60%;
+		left: 50%;
+		transform: translateX(-50%);
 		cursor: pointer;
 		display: none;
 
@@ -89,6 +128,14 @@ header {
 		height: 56px;
 		position: relative;
 
+		a {
+			color: @white_color;
+
+			&:hover {
+					color: @light_brown;
+				}
+		}
+
 		.nav__logo {
 			float: left;
 			position: relative;
@@ -100,7 +147,7 @@ header {
 			}
 
 			p {
-				font-family: Raleway;
+				font-family: @raleway;
 				font-size: 34px;
 				position: absolute;
 				top: 50%;
@@ -126,10 +173,6 @@ header {
 
 			.menu__item {
 				display: inline-block;
-
-				&:hover {
-					color: @light_brown;
-				}
 			}
 		}
 
@@ -363,6 +406,10 @@ header {
 	background-color: #fbfaf8;
 	position: relative;
 
+	.text {
+		width: 65%;
+	}
+
 	.browser__wrapper {
 		width: 65%;
 		margin: 0 auto;
@@ -456,16 +503,19 @@ header {
 .portfolio {
 	
 	.portfolio__wrapper {
-	width: 60%;
-	margin: 0 auto;
-	padding-bottom: 80px;
+		width: 60%;
+		margin: 0 auto;
+		padding-bottom: 80px;
 	}
 
 	&__buttons {
-		width: 60%;
+		width: 100%;
 		margin: 40px auto;
-		display: flex;
-		justify-content: space-between;
+		
+		&_wrapper {
+			text-align: center;
+			margin: 0 auto; 
+		}
 
 		a {
 			width: 120px;
@@ -478,6 +528,7 @@ header {
 			font-family: @montserrat;
 			font-size: 14px;
 			transition: 0.3s;
+			display: inline-block;
 			
 			&:nth-last-child(1) {
 				margin-right: 0px;
@@ -637,34 +688,34 @@ header {
 
 // FEATURES SECTION
 
-
 .features {
 	width: 100%;
 	background-color: #fbfaf8;
 
 	&__wrapper {
-		width: 58%;
+		width: 60%;
 		margin: 0 auto;
 		padding-top: 80px;
 		font-size: 0px;
 
 		.picture {
-			margin-right: 10px;
-			width: 39%;
-			min-height: 615px;
+			padding-right: 10px;
+			box-sizing: border-box;
+			width: 40%;
+			min-height: 616px;
 			background-image: url(../img/iPhone_in_hand.png);
 			background-size: contain;
 			background-repeat: no-repeat;
+			background-position: bottom;
 			display: inline-block;
-			vertical-align: bottom;
+			vertical-align: bottom;			
 		}
 
 		.features__text-container {
 			width: 60%;
-			//margin-bottom: 80px;
-			margin-bottom: 15%;
+			margin-bottom: 180px;
 			display: inline-block;
-			vertical-align: middle;
+			vertical-align: middle;			
 		
 			h2 {
 				color: @gray_color;
@@ -721,17 +772,18 @@ header {
 		width: 100%;
 
 		.stats__wrapper {
-			width: 48%;
+			width: 63%;
 			margin: 0 auto;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			height: 300px;
+			font-size: 0px;
+
 
 			.stats__card {
 				text-align: center;
 				transition: 0.3s;
 				min-width: 136px;
+				display: inline-block;
+				margin: 70px auto 60px;
+				width: 20%;
 
 				&:hover {
 					transform: scale(1.1);
@@ -779,21 +831,16 @@ header {
 
 		.posts-slider {
 			width: 100%;
-		}
-
-		.posts-row {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
+			font-size: 0px;
 		}
 
 		.text {
 			padding-top: 80px;
 			margin-bottom: 40px;
-			flex-basis: 100%;
+			width: 100%;
 
 			p {
-				width: 755px;
+				width: 90%;
 				margin: 0 auto;
 			}
 		}
@@ -802,15 +849,23 @@ header {
 			transition: 0.5s;
 			cursor: pointer;
 		}
+		
 
 		.post {
-			width: 370px;
+			width: 30%;
 			border: 1px solid #f8f8f8;
 			transition: 0.5s;
-			margin: 0 auto;
+			margin: 0 15px;
+			display: inline-block;
 
 			&__image {
 				position: relative;
+				width: 100%;
+				height: 220px;
+				 
+				img {
+				 	width: 100%; 	
+				}
 			}
 
 			&__date {
@@ -969,23 +1024,24 @@ header {
 
 .partners {
 	width: 100%;
-	height: 490px;
 	background: url(../img/partners-bg.png);
 	box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.7) inset;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	&__wrapper {
 		width: 58%;
 		height: 100%;
 		margin: 0 auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		font-size: 0px;
+		text-align: center;
 	}
 
 	&__partner {
-		width: 23%;
-		height: 100%;
-		background-size: contain;
+		width: 20%;
+		display: inline-block;
+		margin: 140px 10px;
+		vertical-align: middle;
 	}
 
 	#p1 {
@@ -1043,7 +1099,6 @@ header {
 	}
 
 	&__about {
-		//width: 258px;
 		width: 25%;
 		display: inline-block;
 
@@ -1089,7 +1144,6 @@ header {
 
 	&__recent-posts {
 		display: inline-block;
-		//width: 250px;
 		width: 25%;
 		margin: 27px 30px 0 40px;
 
@@ -1138,7 +1192,6 @@ header {
 	
 	&__twitter-posts {
 		display: inline-block;
-		//width: 270px;
 		width: 25%;
 		margin-top: 27px;
 
@@ -1210,7 +1263,6 @@ header {
 
 	&__widget {
 		display: inline-block;
-		//width: 270px;
 		width: 25%;
 		margin-left: 30px;
 		margin-top: 27px;
@@ -1273,12 +1325,18 @@ header {
 	}
 }
 
-.clearfix {
-	content: '';
-	clear: both;
+@media (min-width: 1699px) and (max-width: 1865px) {
+	
+	
 }
 
-@media (min-width: 1200px) and (max-width: 1810px) {
+
+@media (min-width: 1199px) and (max-width: 1700px) {
+		
+	
+}
+
+@media (max-width: 1810px) {
 	.nav__icons_cart {
 		display: none;
 	}
@@ -1289,36 +1347,230 @@ header {
 }
 
 /* Portrait tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
+	header {
+		.burger {
+			display: inline-block;
+		}
 
-	header .burger {
-		display: inline-block;
-	}
-		
-	.nav__menu {
-		//flex-direction: column;
-		display: inline-block;
-		position: absolute;
-		left: -150px;
-		top: 90px;
+		.header-slider {
+			width: 88%;
+		}
 
-		.menu__item {
-			display: block;
+		nav {
+			.nav__menu {
+				display: none;
+			}
+		}
+
+		.nav__icons_cart {
+			display: none;
+		}
+
+		.nav__icons_search {
+			display: none;
 		}
 	}
 
-	.nav__icons_cart {
-		display: none;
+	.portfolio__buttons a {
+		margin-bottom: 10px;
 	}
 
-	.nav__icons_search {
-		display: none;
+	.portfolio .portfolio__cards_card {
+		width: 48%;
+	}
+
+	.icons__container {
+		margin: 82px auto 0;
+	}
+
+	.icons__icon {
+		width: 50%;
+		margin-bottom: 60px;
+	}
+
+	.about .browser__wrapper {
+		#browser-left, #browser-center, #browser-right {
+		position: static;
+		z-index: 0;
+		transform: translateX(0);
+		}
+
+		img {
+			width: 100%;
+
+		}
+
+		.browser-slide {
+			width: 60%;
+		}
+	}	
+
+	.features__wrapper {
+		width: 90%;
+		padding: 0px;
+
+		.picture {
+			width: 35%;
+			min-height: 550px;
+		}
+
+		.features__text-container {
+			width: 65%;
+			margin-bottom: 50px;
+		}
+	}
+
+	.blog__stats .stats__wrapper {
+		width: 90%;
+		
+	}
+
+	.partners__wrapper {
+		padding: 50px 0;
+	}
+
+	.partners__partner {
+		width: 40%;
+		margin: 0;
+
+		&:nth-child(3) {
+			margin-top: 50px;
+		}
+
+		&:nth-child(3) {
+			margin-bottom: 60px;
+		}
+	}
+
+	.footer__content {
+		display: initial;
+		font-size: 0px;
+	}
+
+	.footer__about, .footer__widget {
+		margin: 0 auto 20px;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.footer__recent-posts, .footer__twitter-posts {
+		width: 50%;
+		margin: 0px;
+		box-sizing: border-box;
+		vertical-align: top;
+	}
+
+	.footer__recent-posts {
+		padding-right: 20px; 
+	}
+
+
+	.footer__widget {
+		width: 50%;
+		margin: 20px auto 0px;
+	}
+
+	.footer__wrapper {
+		padding: 40px 0 20px;
+	}
+
+	.footer__bottom .bottom__menu_left, .footer__bottom .bottom__menu_right {
+		float: none;
+		margin: 0 auto 20px;
+		text-align: center;
 	}
 }
 
 /* Portrait tablets and small desktops */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
+	header {
 
+		.header-slider {
+			margin: 70px auto 30px;
+		}
+
+		#get-started-btn {
+			margin: 0 auto 30px
+		}
+	}
+
+	.icons__container {
+		margin: 30px auto 0;
+		width: 80%;
+	}
+
+	.icons__icon {
+		margin-bottom: 30px;
+		width: 50%;
+
+		p {
+			width: 90%;
+		}
+	}
+
+	.text {
+		padding-top: 50px;
+	}
+
+	.about .browser__wrapper {
+		width: 80%;
+		height: auto;
+		padding-bottom: 50px;
+	}
+
+	.about .purchase__wrapper {
+		width: 80%;
+	}
+
+	.about .purchase h2 {
+		font-size: 24px;
+	}
+
+	.portfolio .portfolio__wrapper {
+		width: 80%;
+		padding-bottom: 50px;
+	}
+
+	.video-presentation__wrapper {
+		padding: 100px 0 100px;
+		width: 60%;
+	}
+
+	.features__wrapper {
+		width: 80%;
+	}
+
+	.features__wrapper .picture {
+		display: none;
+	}
+
+	.features__wrapper .features__text-container {
+		width: 100%;
+		padding-top: 50px;
+	}
+
+	.blog__posts .posts__wrapper {
+		width: 80%;
+
+	}
+
+	.blog__posts .text {
+		padding-top: 50px;
+	}
+
+	.blog .posts_nav {
+		padding: 30px 0 30px;
+	}
+
+	.partners__partner {
+		margin-right: 20px;
+
+		&:nth-child(even) {
+			margin-right: 0px;
+		}
+	}
 }
 
 /* Landscape phones and portrait tablets */
