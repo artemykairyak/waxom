@@ -64,6 +64,36 @@
 					adaptiveHeight: true,
 					initialSlide: 1					
                 }
+            },
+             {
+                breakpoint: 480,
+                settings: {
+                	centerMode: false,
+                	slidesToShow: 1,
+			        slidesToScroll: 1,
+			        infinite: false,
+					arrows: false,
+					adaptiveHeight: true,
+					initialSlide: 1					
+                }
+            }
+		]
+		});
+
+	     $('.portfolio__cards').slick({
+	     	responsive: [
+	     	  {
+	            breakpoint: 2048,
+	            settings: "unslick"
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                	slidesToShow: 1,
+			        slidesToScroll: 1,
+			        infinite: false,
+					arrows: false				
+                }
             }
 		]
 		});
@@ -88,12 +118,19 @@
 		prevArrow: $('.posts_nav__prev-posts'),
 		nextArrow: $('.posts_nav__next-posts'),
 		responsive: [
-	     	  {
+	     	{
 	            breakpoint: 1199,
 	            settings: {
-	            		slidesToShow: 2,
-  						slidesToScroll: 2,
+	            	slidesToShow: 2,
+					slidesToScroll: 2,
 	            }
+            },
+            {
+            	breakpoint: 767,
+            	settings: {
+            		slidesToShow: 1,
+					slidesToScroll: 1,
+            	}
             }]
 	  });
 
@@ -104,13 +141,24 @@
 				$('.posts_nav__prev-posts').removeClass('disabled-post-arrow');
 			}
 
-			if (document.body.clientWidth < 1199) {
+			if (document.body.clientWidth < 1199 && document.body.clientWidth > 767) {
 				if (this.slick.currentSlide === this.slick.slideCount - 2) {
 					$('.posts_nav__next-posts').addClass('disabled-post-arrow');
 				} else {
 					$('.posts_nav__next-posts').removeClass('disabled-post-arrow');
 				}
-			} else {
+			} 
+
+			else if (document.body.clientWidth <= 767) {
+				console.log(this.slick.currentSlide);
+				if (this.slick.currentSlide === this.slick.slideCount - 1) {
+					$('.posts_nav__next-posts').addClass('disabled-post-arrow');
+				} else {
+					$('.posts_nav__next-posts').removeClass('disabled-post-arrow');
+				}
+			} 
+
+			else {
 				if (this.slick.currentSlide === this.slick.slideCount - 3) {
 					$('.posts_nav__next-posts').addClass('disabled-post-arrow');
 				} else {
