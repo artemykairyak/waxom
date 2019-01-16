@@ -880,6 +880,8 @@ header #get-started-btn:hover {
   transition: 0.5s;
   margin: 0 15px;
   display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .blog__posts .post__image {
@@ -1053,37 +1055,35 @@ header #get-started-btn:hover {
   margin: 0 auto;
   font-size: 0px;
   text-align: center;
+  padding: 140px 10px;
 }
 
 .partners__partner {
-  width: 20%;
   display: inline-block;
-  margin: 140px 10px;
-  vertical-align: middle;
+  height: 175px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 20%;
 }
 
 .partners #p1 {
-  background: url(../img/logo-01.png) no-repeat;
-  background-size: contain;
-  height: 127px;
+  background-image: url(../img/logo-01.png);
+  background-size: 90% auto;
 }
 
 .partners #p2 {
-  background: url(../img/logo-02.png) no-repeat;
-  background-size: contain;
-  height: 210px;
+  background-image: url(../img/logo-02.png);
+  background-size: auto 90%;
 }
 
 .partners #p3 {
-  background: url(../img/logo-03.png) no-repeat;
-  background-size: contain;
-  height: 130px;
+  background-image: url(../img/logo-03.png);
+  background-size: 90% auto;
 }
 
 .partners #p4 {
-  background: url(../img/logo-04.png) no-repeat;
-  background-size: contain;
-  height: 164px;
+  background-image: url(../img/logo-04.png);
+  background-size: auto 90%;
 }
 
 .footer {
@@ -1358,6 +1358,12 @@ header #get-started-btn:hover {
   }
 }
 
+@media (max-width: 1800px) {
+  .partners__wrapper {
+    width: 80%;
+  }
+}
+
 @media (max-width: 1540px) {
   header .home__text_bottom {
     width: 60%;
@@ -1376,11 +1382,29 @@ header #get-started-btn:hover {
     width: 65%;
     margin-bottom: 13%;
   }
+
+  .partners__partner {
+    height: 160px;
+  }
 }
 
 @media (max-width: 1199px) {
   header .burger {
     display: inline-block;
+  }
+
+  header nav .nav__icons_cart,
+  header nav .nav__icons_search {
+    display: inline-block;
+    top: 60px;
+  }
+
+  header nav .nav__icons_cart {
+    right: 15px;
+  }
+
+  header nav .nav__icons_search {
+    right: 45px;
   }
 
   header .header-slider {
@@ -1464,17 +1488,12 @@ header #get-started-btn:hover {
     padding: 50px 0;
   }
 
+  .partners__wrapper {
+    width: 62%;
+  }
+
   .partners__partner {
     width: 40%;
-    margin: 0;
-  }
-
-  .partners__partner:nth-child(3) {
-    margin-top: 50px;
-  }
-
-  .partners__partner:nth-child(3) {
-    margin-bottom: 60px;
   }
 
   .footer__content {
@@ -1621,24 +1640,6 @@ header #get-started-btn:hover {
   .blog .posts_nav {
     padding: 30px 0 30px;
   }
-
-  .partners__partner {
-    margin-right: 20px;
-    vertical-align: middle;
-    background-position: bottom;
-  }
-
-  .partners__partner:nth-child(even) {
-    margin-right: 0px;
-  }
-
-  .partners__partner:nth-child(3) {
-    vertical-align: bottom;
-  }
-
-  .partners__partner:nth-child(4) {
-    vertical-align: bottom;
-  }
 }
 
 @media (max-width: 767px) {
@@ -1692,12 +1693,12 @@ header #get-started-btn:hover {
   }
 
   .blog__stats .stats__wrapper .stats__card {
-    width: 100%;
-    text-align: left;
+    width: 50%;
     margin: 0;
-    padding: 15px 20% 15px 20%;
+    padding: 15px 0 15px 15%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    text-align: left;
   }
 
   .blog__stats .stats__wrapper .stats__card:nth-child(1) {
@@ -1708,9 +1709,20 @@ header #get-started-btn:hover {
     padding-bottom: 30px;
   }
 
-  .blog__stats .stats__wrapper .stats__card .label {
+  .blog__stats .stats__wrapper .stats__card:nth-child(5) {
     width: 100%;
-    text-align: left;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .blog__stats .stats__wrapper .stats__card:nth-child(5) .label {
+    text-align: center;
+    padding-right: 3%;
+  }
+
+  .blog__stats .stats__wrapper .stats__card:nth-child(5) img {
+    width: 44px;
+    height: 34px;
   }
 
   .blog__stats .stats__wrapper .stats__card .number {
@@ -1721,6 +1733,10 @@ header #get-started-btn:hover {
 
   .blog__stats .stats__wrapper .stats__card .line {
     display: none;
+  }
+
+  .blog__stats .stats__wrapper .stats__card .label {
+    text-align: left;
   }
 
   .blog__posts .post__title {
@@ -1738,11 +1754,16 @@ header #get-started-btn:hover {
   }
 
   .partners__wrapper {
-    width: 80%;
+    width: 95%;
   }
 }
 
 @media (max-width: 480px) {
+  header .menu__wrapper {
+    padding-left: 5%;
+    padding-right: 15%;
+  }
+
   header .home__text_upper {
     font-size: 28px;
   }
@@ -1766,10 +1787,9 @@ header #get-started-btn:hover {
   }
 
   .icons__icon {
-    display: block;
-    width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    width: 100%;
   }
 
   .icons__icon h4 {
@@ -1797,7 +1817,50 @@ header #get-started-btn:hover {
   }
 
   .blog__stats .stats__wrapper .stats__card {
-    margin: 0 15%;
+    display: block;
+    width: auto;
+    text-align: left;
+    margin: 0;
+    padding: 15px 0 15px 25%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .blog__stats .stats__wrapper .stats__card:nth-child(1) {
+    padding-top: 30px;
+  }
+
+  .blog__stats .stats__wrapper .stats__card:nth-last-child(1) {
+    padding-bottom: 30px;
+  }
+
+  .blog__stats .stats__wrapper .stats__card:nth-child(5) {
+    text-align: left;
+    padding-left: 25%;
+  }
+
+  .blog__stats .stats__wrapper .stats__card:nth-child(5) .label {
+    padding: 0;
+    text-align: left;
+  }
+
+  .blog__stats .stats__wrapper .stats__card:nth-child(5) img {
+    width: 44px;
+    height: 34px;
+  }
+
+  .blog__stats .stats__wrapper .stats__card .label {
+    text-align: left;
+  }
+
+  .blog__stats .stats__wrapper .stats__card .number {
+    display: inline-block;
+    font-size: 36px;
+    margin: 0 20px 0 20px;
+  }
+
+  .blog__stats .stats__wrapper .stats__card .line {
+    display: none;
   }
 
   .blog__posts .text {
@@ -1806,14 +1869,11 @@ header #get-started-btn:hover {
 
   .partners__wrapper {
     width: 94%;
+    padding: 20px;
   }
 
-  .partners__partner:nth-child(3) {
-    margin-top: 10px;
-  }
-
-  .partners__partner:nth-child(3) {
-    margin-bottom: 20px;
+  .partners__partner {
+    height: 90px;
   }
 
   .footer__wrapper {

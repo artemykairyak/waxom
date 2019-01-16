@@ -34,17 +34,8 @@
   			}
 		});
 
-	   $('.post__image_slider').slick({
-		speed: 500,
-		infinite: false,
-		dots: true,
-		arrows: false,
-		adaptiveHeight: false,
-		appendDots: $('.post-dots'),
-		customPaging: function(slider, i) {
-      		return '<span class="dot"></span>';
-    	}
-	  });
+
+	   
 
 	     $('.browser__wrapper').slick({
 	     	responsive: [
@@ -98,16 +89,6 @@
 		]
 		});
 
-	   $('.post__image_slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-  			var currentDot = $(postDots[this.slick.currentSlide]);
-  			for (var i = 0; i < postDots.length; i++) {
-  				if (i === this.slick.currentSlide) {
-  					currentDot.addClass('active-dot');
-  				} else {
-  					postDots[i].classList.remove('active-dot');
-  				}
-  			}
-  		});	
 
 	   $('.posts-slider').slick({
 	   	slidesToShow: 3,
@@ -181,9 +162,8 @@
 	var icons = document.querySelectorAll('.icons__icon');
 	var postDots = document.querySelectorAll('.post-dots .dot');
 	var navIcons = document.querySelectorAll('.nav_icon');
+	var loadMoreBtn = document.querySelector('#load-more-btn');
 
-
-	postDots[0].classList.add('active-dot');
 	sliderDots[0].classList.add('active-dot');
 
 	for (var i = 0; i < navIcons.length; i++) {
@@ -241,7 +221,6 @@
 		this.querySelector('.toplabel').style.color = '#ffffff';
 		this.querySelector('.bottomlabel').style.color = '#c7b299';
 		this.querySelector('img').style.filter = 'brightness(50%)';
-		this.querySelector('.arrow').style.opacity = '0';
 	} 
 
 	function onCardLeave(e) {
@@ -249,7 +228,6 @@
 		this.querySelector('.toplabel').style.color = '';
 		this.querySelector('.bottomlabel').style.color = '';
 		this.querySelector('img').style.filter = '';
-		this.querySelector('.arrow').style.opacity = '';
 	} 
 
 	playButton.addEventListener('mouseenter', function(e) {
@@ -312,6 +290,21 @@
 	function onNavIconsLeave(e) {
 		event.target.querySelector('.active-icon').classList.remove('enable-icon');
 		event.target.querySelector('.unactive-icon').classList.remove('disable-icon');
+	}
+
+	loadMoreBtn.addEventListener('click', loadMoreAJAX);
+
+	function loadMoreAJAX(e) {
+		console.log(1);
+		e.preventDefault();
+		$.ajax({
+			type: 'GET',
+			url: '../php/server.php',
+			success: function(data) {
+				$('.more-posts').html(data);
+				alert(data);
+			}
+		})
 	}
 
 	$('.burger-icon').on('click', function(e) {
