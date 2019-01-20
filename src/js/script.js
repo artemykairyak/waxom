@@ -1,152 +1,147 @@
-	$(document).ready(function(){
-	  $('.header-slider').slick({
-	  	prevArrow: $('#arrow-left'),
+$(document).ready(function(){
+	$('.header-slider').slick({
+		prevArrow: $('#arrow-left'),
 		nextArrow: $('#arrow-right'),
 		speed: 500,
 		infinite: false,
 		dots: true,
 		appendDots: $('.slider'),
 		customPaging: function(slider, i) {
-      		return '<span class="dot"></span>';
-    	}
-	  });
+			return '<span class="dot"></span>';
+		}
+	});
 
-	  $('.header-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-  			var currentDot = $(sliderDots[this.slick.currentSlide]);
-  			for (var i = 0; i < sliderDots.length; i++) {
-  				if (i === this.slick.currentSlide) {
-  					currentDot.addClass('active-dot');
-  				} else {
-  					sliderDots[i].classList.remove('active-dot');
-  				}
+	$('.header-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		var currentDot = $(sliderDots[this.slick.currentSlide]);
+		for (var i = 0; i < sliderDots.length; i++) {
+			if (i === this.slick.currentSlide) {
+				currentDot.addClass('active-dot');
+			} else {
+				sliderDots[i].classList.remove('active-dot');
+			}
 
-  				if (this.slick.currentSlide === 0) {
-  					$('#arrow-left').addClass('disabled-arrow');
-  				} else {
-  					$('#arrow-left').removeClass('disabled-arrow');
-  				}
-  				
-  				if (this.slick.currentSlide === this.slick.slideCount - 1) {
-  					$('#arrow-right').addClass('disabled-arrow');
-  				} else {
-  					$('#arrow-right').removeClass('disabled-arrow');
-  				}
-  			}
-		});
+			if (this.slick.currentSlide === 0) {
+				$('#arrow-left').addClass('disabled-arrow');
+			} else {
+				$('#arrow-left').removeClass('disabled-arrow');
+			}
 
+			if (this.slick.currentSlide === this.slick.slideCount - 1) {
+				$('#arrow-right').addClass('disabled-arrow');
+			} else {
+				$('#arrow-right').removeClass('disabled-arrow');
+			}
+		}
+	});
 
-	   
-
-	     $('.browser__wrapper').slick({
-	     	responsive: [
-	     	  {
-	            breakpoint: 2048,
-	            settings: "unslick"
-            },
-            {
-                breakpoint: 1199,
-                settings: {
-                	centerMode: true,
-                	slidesToShow: 1,
-			        slidesToScroll: 1,
-			        infinite: false,
-			        centerPadding: '70px',
-					arrows: false,
-					adaptiveHeight: true,
-					initialSlide: 1					
-                }
-            },
-             {
-                breakpoint: 480,
-                settings: {
-                	centerMode: false,
-                	slidesToShow: 1,
-			        slidesToScroll: 1,
-			        infinite: false,
-					arrows: false,
-					adaptiveHeight: true,
-					initialSlide: 1					
-                }
-            }
+	$('.browser__wrapper').slick({
+		responsive: [
+		{
+			breakpoint: 2048,
+			settings: "unslick"
+		},
+		{
+			breakpoint: 1199,
+			settings: {
+				centerMode: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: false,
+				centerPadding: '70px',
+				arrows: false,
+				adaptiveHeight: true,
+				initialSlide: 1					
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				centerMode: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: false,
+				arrows: false,
+				adaptiveHeight: true,
+				initialSlide: 1					
+			}
+		}
 		]
-		});
+	});
 
-	     $('.portfolio__cards').slick({
-	     	responsive: [
-	     	  {
-	            breakpoint: 2048,
-	            settings: "unslick"
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                	slidesToShow: 1,
-			        slidesToScroll: 1,
-			        infinite: false,
-					arrows: false				
-                }
-            }
-		]
-		});
+	$('.portfolio__cards').slick({
+		responsive: [
+		{
+			breakpoint: 2048,
+			settings: "unslick"
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: false,
+				arrows: false				
+			}
+		}]
+	});
 
-
-	   $('.posts-slider').slick({
-	   	slidesToShow: 3,
-  		slidesToScroll: 3,
+	$('.posts-slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
 		speed: 500,
 		infinite: false,
 		adaptiveHeight: false,
 		prevArrow: $('.posts_nav__prev-posts'),
 		nextArrow: $('.posts_nav__next-posts'),
 		responsive: [
-	     	{
-	            breakpoint: 1199,
-	            settings: {
-	            	slidesToShow: 2,
-					slidesToScroll: 2,
-	            }
-            },
-            {
-            	breakpoint: 767,
-            	settings: {
-            		slidesToShow: 1,
-					slidesToScroll: 1,
-            	}
-            }]
-	  });
+		{
+			breakpoint: 1199,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
+			}
+		},
+		{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			}
+		}]
+	});
 
-	   $('.posts-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-			if (this.slick.currentSlide === 0) {
-				$('.posts_nav__prev-posts').addClass('disabled-post-arrow');
+	$('.posts-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		if (this.slick.currentSlide === 0) {
+			$('.posts_nav__prev-posts').addClass('disabled-post-arrow');
+		} else {
+			$('.posts_nav__prev-posts').removeClass('disabled-post-arrow');
+		}
+
+		if (document.body.clientWidth < 1199 && document.body.clientWidth > 767) {
+			if (this.slick.currentSlide === this.slick.slideCount - 2) {
+				$('.posts_nav__next-posts').addClass('disabled-post-arrow');
 			} else {
-				$('.posts_nav__prev-posts').removeClass('disabled-post-arrow');
+				$('.posts_nav__next-posts').removeClass('disabled-post-arrow');
 			}
+		} 
 
-			if (document.body.clientWidth < 1199 && document.body.clientWidth > 767) {
-				if (this.slick.currentSlide === this.slick.slideCount - 2) {
-					$('.posts_nav__next-posts').addClass('disabled-post-arrow');
-				} else {
-					$('.posts_nav__next-posts').removeClass('disabled-post-arrow');
-				}
-			} 
-
-			else if (document.body.clientWidth <= 767) {
-				console.log(this.slick.currentSlide);
-				if (this.slick.currentSlide === this.slick.slideCount - 1) {
-					$('.posts_nav__next-posts').addClass('disabled-post-arrow');
-				} else {
-					$('.posts_nav__next-posts').removeClass('disabled-post-arrow');
-				}
-			} 
-
-			else {
-				if (this.slick.currentSlide === this.slick.slideCount - 3) {
-					$('.posts_nav__next-posts').addClass('disabled-post-arrow');
-				} else {
-					$('.posts_nav__next-posts').removeClass('disabled-post-arrow');
-				}
+		else if (document.body.clientWidth <= 767) {
+			console.log(this.slick.currentSlide);
+			if (this.slick.currentSlide === this.slick.slideCount - 1) {
+				$('.posts_nav__next-posts').addClass('disabled-post-arrow');
+			} else {
+				$('.posts_nav__next-posts').removeClass('disabled-post-arrow');
 			}
-		});
+		} 
+
+		else {
+			if (this.slick.currentSlide === this.slick.slideCount - 3) {
+				$('.posts_nav__next-posts').addClass('disabled-post-arrow');
+			} else {
+				$('.posts_nav__next-posts').removeClass('disabled-post-arrow');
+			}
+		}
+	});
 
 	var card = document.querySelectorAll('.portfolio__cards_card');
 	var portfolioButtons = document.querySelectorAll('.portfolio__buttons a');
@@ -210,9 +205,9 @@
 		for (i = 0; i < portfolioButtons.length; i++) {
 			if (portfolioButtons[i] === event.target) {
 				portfolioButtons[i].classList.add('selected-portfolio-btn');
-				}	else {
-					portfolioButtons[i].classList.remove('selected-portfolio-btn');
-				}
+			}	else {
+				portfolioButtons[i].classList.remove('selected-portfolio-btn');
+			}
 		}
 	}
 
@@ -295,16 +290,19 @@
 	loadMoreBtn.addEventListener('click', loadMoreAJAX);
 
 	function loadMoreAJAX(e) {
-		console.log(1);
-		e.preventDefault();
+		var newData = '';
 		$.ajax({
-			type: 'GET',
+			type: 'POST',
 			url: '../php/server.php',
 			success: function(data) {
-				$('.more-posts').html(data);
-				alert(data);
+				newData = data;
+				console.log(newData);
+				$('.more-posts').append(newData);
+				$('.portfolio__cards:last').css('opacity', 0)
+				.animate({opacity: '1'}, 1000);
 			}
 		})
+		e.preventDefault();
 	}
 
 	$('.burger-icon').on('click', function(e) {
