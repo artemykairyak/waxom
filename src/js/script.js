@@ -203,7 +203,7 @@ $(document).ready(function(){
 	function onPortfolioButtonClick(e) {
 		e.preventDefault();
 		for (i = 0; i < portfolioButtons.length; i++) {
-			if (portfolioButtons[i] === event.target) {
+			if (portfolioButtons[i] === e.target) {
 				portfolioButtons[i].classList.add('selected-portfolio-btn');
 			}	else {
 				portfolioButtons[i].classList.remove('selected-portfolio-btn');
@@ -212,79 +212,79 @@ $(document).ready(function(){
 	}
 
 	function onCardEnter(e) {
-		event.target.classList.add('selected-portfolio-card');
+		e.target.classList.add('selected-portfolio-card');
 		this.querySelector('.toplabel').style.color = '#ffffff';
 		this.querySelector('.bottomlabel').style.color = '#c7b299';
 		this.querySelector('img').style.filter = 'brightness(50%)';
 	} 
 
 	function onCardLeave(e) {
-		event.target.classList.remove('selected-portfolio-card');
+		e.target.classList.remove('selected-portfolio-card');
 		this.querySelector('.toplabel').style.color = '';
 		this.querySelector('.bottomlabel').style.color = '';
 		this.querySelector('img').style.filter = '';
 	} 
 
 	playButton.addEventListener('mouseenter', function(e) {
-		event.target.querySelector('.play-btn-circle').style.transform = 'rotate(360deg)';
+		e.target.querySelector('.play-btn-circle').style.transform = 'rotate(360deg)';
 	});
 
 	playButton.addEventListener('mouseleave', function(e) {
-		event.target.querySelector('.play-btn-circle').style.transform = '';
+		e.target.querySelector('.play-btn-circle').style.transform = '';
 	})
 
 	function onPostEnter(e) {
-		event.target.classList.add('selected-post');
+		e.target.classList.add('selected-post');
 	};
 
 	function onPostLeave(e) {
-		event.target.classList.remove('selected-post');
+		e.target.classList.remove('selected-post');
 	} 
 
 	function onRecentPostEnter(e) {
-		event.target.classList.add('selected-recent-post');
+		e.target.classList.add('selected-recent-post');
 	}
 
 	function onRecentPostLeave(e) {
-		event.target.classList.remove('selected-recent-post');
+		e.target.classList.remove('selected-recent-post');
 	}
 
 	function onbottomMenuItemsEnter(e) {
-		event.target.classList.add('selected-bottom-menu-item');
+		e.target.classList.add('selected-bottom-menu-item');
 	}
 
 	function onbottomMenuItemsLeave(e) {
-		event.target.classList.remove('selected-bottom-menu-item');
+		e.target.classList.remove('selected-bottom-menu-item');
 	}
 
 	function onTwitterPostsEnter(e) {
-		event.target.classList.add('selected-twitter-post');
+		e.target.classList.add('selected-twitter-post');
 	}
 
 	function onTwitterPostsLeave(e) {
-		event.target.classList.remove('selected-twitter-post');
+		e.target.classList.remove('selected-twitter-post');
 	}
 
 	function onIconsEnter(e) {
-		event.target.classList.add('selected_icon');
-		event.target.querySelector('.active-icon').classList.add('enable-icon');
-		event.target.querySelector('.unactive-icon').classList.add('disable-icon');
+		e.target.classList.add('selected_icon');
+		e.target.querySelector('.active-icon').classList.add('enable-icon');
+		e.target.querySelector('.unactive-icon').classList.add('disable-icon');
 	}
 
 	function onIconsLeave(e) {
-		event.target.classList.remove('selected_icon');
-		event.target.querySelector('.active-icon').classList.remove('enable-icon');
-		event.target.querySelector('.unactive-icon').classList.remove('disable-icon');
+		e.target.classList.remove('selected_icon');
+		e.target.querySelector('.active-icon').classList.remove('enable-icon');
+		e.target.querySelector('.unactive-icon').classList.remove('disable-icon');
 	}
 
 	function onNavIconsEnter(e) {
-		event.target.querySelector('.active-icon').classList.add('enable-icon');
-		event.target.querySelector('.unactive-icon').classList.add('disable-icon');
+		e.target.querySelector('.active-icon').classList.add('enable-icon');
+		e.target.querySelector('.unactive-icon').classList.add('disable-icon');
 	}
 
 	function onNavIconsLeave(e) {
-		event.target.querySelector('.active-icon').classList.remove('enable-icon');
-		event.target.querySelector('.unactive-icon').classList.remove('disable-icon');
+		e.target.querySelector('.active-icon').classList.remove('enable-icon');
+		e.target.querySelector('.unactive-icon').classList.remove('disable-icon');
 	}
 
 	loadMoreBtn.addEventListener('click', loadMoreAJAX);
